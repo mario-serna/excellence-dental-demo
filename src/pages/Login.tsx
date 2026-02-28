@@ -132,7 +132,11 @@ export default function Login() {
                 setEmail("brenda@excellence.com");
                 setPassword("123");
               }}
-              className="w-full text-left text-xs text-muted-foreground font-mono hover:text-primary hover:bg-primary/5 p-2 rounded transition-colors border border-transparent hover:border-border"
+              onTouchEnd={() => {
+                setEmail("brenda@excellence.com");
+                setPassword("123");
+              }}
+              className="w-full text-left text-xs text-muted-foreground font-mono hover:text-primary hover:bg-primary/5 p-2 rounded transition-colors border border-transparent hover:border-border cursor-pointer"
             >
               brenda@excellence.com (Admin)
             </button>
@@ -142,7 +146,11 @@ export default function Login() {
                 setEmail("sarah@excellence.com");
                 setPassword("123");
               }}
-              className="w-full text-left text-xs text-muted-foreground font-mono hover:text-primary hover:bg-primary/5 p-2 rounded transition-colors border border-transparent hover:border-border"
+              onTouchEnd={() => {
+                setEmail("sarah@excellence.com");
+                setPassword("123");
+              }}
+              className="w-full text-left text-xs text-muted-foreground font-mono hover:text-primary hover:bg-primary/5 p-2 rounded transition-colors border border-transparent hover:border-border cursor-pointer"
             >
               sarah@excellence.com (Doctor)
             </button>
@@ -152,7 +160,11 @@ export default function Login() {
                 setEmail("luis@excellence.com");
                 setPassword("123");
               }}
-              className="w-full text-left text-xs text-muted-foreground font-mono hover:text-primary hover:bg-primary/5 p-2 rounded transition-colors border border-transparent hover:border-border"
+              onTouchEnd={() => {
+                setEmail("luis@excellence.com");
+                setPassword("123");
+              }}
+              className="w-full text-left text-xs text-muted-foreground font-mono hover:text-primary hover:bg-primary/5 p-2 rounded transition-colors border border-transparent hover:border-border cursor-pointer"
             >
               luis@excellence.com (Asistente)
             </button>
