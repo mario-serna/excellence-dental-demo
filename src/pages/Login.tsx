@@ -32,7 +32,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light to-secondary p-4 relative overflow-hidden">
       <svg
-        className="absolute bottom-0 right-0 w-96 h-96 opacity-[0.03] text-primary"
+        className="absolute bottom-0 right-0 w-96 h-96 opacity-[0.03] text-primary pointer-events-none z-0"
         viewBox="0 0 100 100"
         fill="currentColor"
       >
