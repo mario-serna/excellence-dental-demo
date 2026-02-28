@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98.8%;
+    --foreground: 215 28% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 7%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 199 89% 97%;
+    --primary-soft: 199 89% 94%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 28% 7%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+    --radius: 0.75rem;
+
+    /* Status colors */
+    --status-scheduled: 199 89% 48%;
+    --status-scheduled-bg: 199 89% 96%;
+    --status-scheduled-border: 199 60% 85%;
+    --status-confirmed: 160 84% 39%;
+    --status-confirmed-bg: 160 84% 96%;
+    --status-confirmed-border: 160 60% 82%;
+    --status-completed: 215 16% 47%;
+    --status-completed-bg: 215 16% 96%;
+    --status-completed-border: 215 16% 88%;
+    --status-cancelled: 0 84% 60%;
+    --status-cancelled-bg: 0 84% 97%;
+    --status-cancelled-border: 0 60% 88%;
+    --status-noshow: 38 92% 50%;
+    --status-noshow-bg: 38 92% 96%;
+    --status-noshow-border: 38 60% 82%;
+
+    /* Role colors */
+    --role-admin: 263 70% 50%;
+    --role-admin-bg: 263 70% 96%;
+    --role-admin-border: 263 50% 88%;
+    --role-doctor: 199 89% 48%;
+    --role-doctor-bg: 199 89% 96%;
+    --role-doctor-border: 199 60% 85%;
+    --role-assistant: 215 16% 47%;
+    --role-assistant-bg: 215 16% 96%;
+    --role-assistant-border: 215 16% 88%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.07), 0 2px 4px -1px rgb(15 23 42 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(15 23 42 / 0.08), 0 4px 6px -2px rgb(15 23 42 / 0.04);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 28% 7%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 215 28% 7%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .card-dental {
+    @apply bg-card rounded-xl border border-border p-6;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 200ms ease, transform 200ms ease;
+  }
+
+  .card-dental-interactive:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.4s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  .font-mono-dental {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
